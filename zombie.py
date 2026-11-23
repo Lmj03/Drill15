@@ -63,5 +63,6 @@ class Zombie:
         if group == "boy:zombie":
             game_framework.quit()
         elif group == "zombile:ball":
+            print("hit")
             self.width = self.width/2
             self.height = self.height/2
