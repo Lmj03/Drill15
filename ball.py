@@ -48,6 +48,7 @@ class Ball:
             game_world.remove_object(self)  # 공을 제거
         elif group == "grass:ball":
             self.stopped = True
+            game_world.remove_collision_object(self)
         elif group == "zombie:ball":
             if self.direction == 0: pass
             else:
