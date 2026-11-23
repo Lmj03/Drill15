@@ -62,7 +62,7 @@ class Zombie:
     def handle_collision(self, group, other):
         if group == "boy:zombie":
             game_framework.quit()
-        elif group == "zombile:ball":
+        elif group == "zombie:ball":
             print("hit")
             self.width = self.width/2
             self.height = self.height/2
