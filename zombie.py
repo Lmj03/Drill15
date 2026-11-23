@@ -63,6 +63,9 @@ class Zombie:
         if group == "boy:zombie":
             game_framework.quit()
         elif group == "zombie:ball":
-            print("hit")
-            self.width = self.width/2
-            self.height = self.height/2
+            if self.hitcount ==0:
+                self.width = self.width/2
+                self.height = self.height/2
+                self.hitcount += 1
+            else:
+                game_world.remove_object(self)
