@@ -23,6 +23,7 @@ class Ball:
         self.velocity_y = LAUNCH_SPEED_Y
         self.radius = 10.5 if ball_type == 1 else 20.5
         self.stopped = (direction == 0)  # direction 이 0이면 바닥에 놓인 공
+        self.direction = direction
 
     def update(self):
         if self.stopped:
@@ -47,3 +48,7 @@ class Ball:
             game_world.remove_object(self)  # 공을 제거
         elif group == "grass:ball":
             self.stopped = True
+        elif group == "zombie:ball":
+            if self.direction == 0: pass
+            else:
+                game_world.remove_object(self)
